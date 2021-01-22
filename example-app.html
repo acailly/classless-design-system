@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classless Design System</title>
+  </head>
+
+  <!-- DESIGN SYSTEM -->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    html,
+    body {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      background-color: lightgray;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: lightgreen;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    header nav {
+      background-color: lightpink;
+      display: flex;
+      flex-direction: row;
+      flex-grow: 1;
+      justify-content: center;
+    }
+    header nav ul {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      list-style: none;
+    }
+    header nav ul li {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    header nav ul li:first-child {
+      padding-left: 0;
+    }
+    header nav ul li:last-child {
+      padding-right: 0;
+    }
+    header nav ul li a {
+      text-decoration: none;
+    }
+    header nav ul li a:hover {
+      text-decoration: underline;
+    }
+    main {
+      background-color: lightcyan;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      margin: 0px 20px;
+    }
+    main > * {
+      flex-grow: 1;
+    }
+    main nav {
+      background-color: lightblue;
+      display: flex;
+      flex-direction: row;
+      flex-grow: 0;
+    }
+    main nav ul {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      list-style: none;
+    }
+    main nav ul li {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    main nav ul li:last-child {
+      padding-right: 0;
+    }
+    main nav ul li::before {
+      content: ">";
+      padding-right: 5px;
+    }
+    main nav ul li:first-child::before {
+      content: "";
+      padding-right: 0px;
+    }
+    main nav ul a {
+      text-decoration: none;
+    }
+    main nav ul a:hover {
+      text-decoration: underline;
+    }
+    section {
+      background-color: lightyellow;
+      padding: 20px;
+    }
+    footer {
+      background-color: lightsalmon;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 0px 20px;
+    }
+    h2 {
+      padding-bottom: 20px;
+    }
+    p {
+      padding-bottom: 20px;
+    }
+    ul {
+      padding-bottom: 20px;
+    }
+    input[type="submit"] {
+      border: solid 3px black;
+      background: none;
+      color: black;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    input[type="submit"]:hover {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1>RSS Reader</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">🏡 Home</a></li>
+          <li><a href="design-system.html">🎨 Design System</a></li>
+          <li><a href="example-app.html">🎮 Example</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="example-app.html">NEWS</a></li>
+          <li><a href="example-app.html">📢 Hacker News</a></li>
+        </ul>
+      </nav>
+      <section>
+        <h2>News</h2>
+        <p>There are 5 unread news</p>
+        <ul>
+          <li>
+            <a href="https://news.ycombinator.com/item?id=20854214">
+              Tell HN: Thank you for not redesigning Hacker News
+            </a>
+            <form method="POST" action="#">
+              <input type="hidden" name="item" value="theItemId" />
+              <input type="submit" value="Mark as read" />
+              <label>22/01/2021 10:34</label>
+            </form>
+          </li>
+          <li>
+            <a href="https://news.ycombinator.com/item?id=19593866">
+              Show HN: Water.css – A just-add-css collection of styles to make
+              websites nicer
+            </a>
+            <form method="POST" action="#">
+              <input type="hidden" name="item" value="theItemId" />
+              <input type="submit" value="Mark as read" />
+              <label>22/01/2021 10:34</label>
+            </form>
+          </li>
+          <li>
+            <a href="https://news.ycombinator.com/item?id=23220081">
+              New.css – A classless CSS framework to write modern websites using
+              only HTML
+            </a>
+            <form method="POST" action="#">
+              <input type="hidden" name="item" value="theItemId" />
+              <input type="submit" value="Mark as read" />
+              <label>22/01/2021 10:34</label>
+            </form>
+          </li>
+          <li>
+            <a href="https://news.ycombinator.com/item?id=10367681">
+              Tacit, a CSS Framework Without Classes
+            </a>
+            <form method="POST" action="#">
+              <input type="hidden" name="item" value="theItemId" />
+              <input type="submit" value="Mark as read" />
+              <label>22/01/2021 10:34</label>
+            </form>
+          </li>
+          <li>
+            <a href="https://news.ycombinator.com/item?id=19595731">
+              CSS Bed – class-less CSS gallery
+            </a>
+            <form method="POST" action="#">
+              <input type="hidden" name="item" value="theItemId" />
+              <input type="submit" value="Mark as read" />
+              <label>22/01/2021 10:34</label>
+            </form>
+          </li>
+        </ul>
+        <form method="POST" action="#">
+          <input type="hidden" name="feed" value="📢 Hacker news" />
+          <input type="submit" value="Mark all as read" />
+        </form>
+      </section>
+      <section>
+        <h2>Help</h2>
+        <p>
+          This page shows the list of news from the feed <q>📢 Hacker news</q>
+        </p>
+        <p>
+          If you click on an item of the list, it will open the news in a new
+          tab.
+        </p>
+        <p>
+          If you click on the <q>Mark as read</q> button near a list item, it
+          will remove this news from the list.
+        </p>
+        <p>
+          If you click on the <q>Mark all as read</q> button at the bottom of
+          the list, it will empty the list.
+        </p>
+      </section>
+    </main>
+    <footer>Made with ♥ and a classless design system</footer>
+  </body>
+</html>
