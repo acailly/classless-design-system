@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classless Design System</title>
+  </head>
+
+  <!-- HTML ELEMENTS REFERENCE -->
+  <!-- https://developer.mozilla.org/fr/docs/Web/HTML/Element -->
+
+  <!-- CLASSLESS DESIGN SYSTEM -->
+  <style id="designSystem">
+    button {
+      border: solid 3px black;
+      background: none;
+      color: black;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+    pre:after {
+      content: attr(text);
+      position: absolute;
+      top: 22px;
+      right: 12px;
+    }
+  </style>
+
+  <body>
+    <h1>Classless Design System</h1>
+
+    <h2>Sandbox</h2>
+    <div id="sandbox">
+      <style>
+        textarea,
+        iframe {
+          width: 100%;
+          height: 50%;
+        }
+        textarea {
+          width: 100%;
+          height: 200px;
+          font-size: 18;
+        }
+      </style>
+      <p>Page structure:</p>
+      <textarea placeholder="HTML" id="htmlFrame"></textarea>
+      <p>Additional CSS:</p>
+      <textarea placeholder="CSS" id="cssFrame"></textarea>
+      <p>Preview:</p>
+      <iframe id="preview"></iframe>
+      <script>
+        cssFrame.value = designSystem.innerText;
+        sandbox.oninput = function () {
+          preview.srcdoc =
+            htmlFrame.value + "<style>" + cssFrame.value + "</style>";
+        };
+      </script>
+    </div>
+
+    <h2>Guidelines</h2>
+
+    <h3>Colors</h3>
+    <p>TODO</p>
+    <h3>Typography</h3>
+    <p>TODO</p>
+
+    <h2>Components</h2>
+
+    <h3>Text</h3>
+    <p>TODO</p>
+    <h3>Blockquote</h3>
+    <p>TODO</p>
+    <h3>Code</h3>
+    <code>var i = 12</code>
+    <h3>Keyboard key</h3>
+    <kbd>CTRL+L</kbd>
+    <h3>Preformated text</h3>
+    <pre>This is a preformatted text</pre>
+
+    <h3>Buttons</h3>
+    <button>Click Me!</button>
+    <h3>Radio buttons</h3>
+    <p>TODO</p>
+    <input type="radio" id="option-1" name="selector" />
+    <label for="option-1">Option 1</label>
+    <input type="radio" id="option-2" name="selector" />
+    <label for="option-2">Option 2</label>
+    <h3>Checkboxes</h3>
+    <input type="checkbox" id="option-1" name="selector" />
+    <label for="option-1">Option 1</label>
+    <input type="checkbox" id="option-2" name="selector" />
+    <label for="option-2">Option 2</label>
+    <h3>Text input</h3>
+    <label for="text-input">Text field:</label>
+    <input id="text-input" />
+    <h3>Text area</h3>
+    <textarea></textarea>
+    <h3>Selects</h3>
+    <label for="my-select">Choose an option:</label>
+    <select id="my-select">
+      <option value="">--Please choose an option--</option>
+      <option value="option1">option 1</option>
+      <option value="option2">option 2</option>
+    </select>
+
+    <h3>Tables</h3>
+    <table>
+      <colgroup span="4" class="columns"></colgroup>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+        <th>Column 3</th>
+        <th>Column 4</th>
+      </tr>
+      <tr>
+        <td>value11</td>
+        <td>value12</td>
+        <td>value13</td>
+        <td>value14</td>
+      </tr>
+      <tr>
+        <td>value21</td>
+        <td>value22</td>
+        <td>value23</td>
+        <td>value24</td>
+      </tr>
+    </table>
+    <h3>Lists</h3>
+    <ul>
+      <li>Item 1</li>
+      <li>
+        Item 2
+        <ul>
+          <li>Item a</li>
+          <li>Item b</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h3>Cards</h3>
+    <p>TODO</p>
+    <h3>Dialog</h3>
+    <p>TODO</p>
+    <h3>Tabs</h3>
+    <p>TODO</p>
+
+    <h3>Menus</h3>
+    <p>TODO</p>
+    <h3>Navbar</h3>
+    <p>TODO</p>
+    <h3>Breadcrumb</h3>
+    <p>TODO</p>
+  </body>
+</html>
