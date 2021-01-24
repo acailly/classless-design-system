@@ -66,7 +66,23 @@
   /**
    * Text
    **/
-   h1, h2, h3, h4, h5, h6 {
+  blockquote {
+    color: var(--primary-color);
+    background-color: var(--primary-color-light);
+    border-left: 5px solid var(--primary-color);
+    margin: 0 0 2.5rem 0;
+    padding: 0.75rem 0.75rem 0.75rem 1rem; 
+  }
+
+  code {
+    color: var(--primary-color);
+    background-color: var(--primary-color-light);
+    margin: 0 0 2.5rem 0;
+    padding: 0.75rem; 
+  }
+  
+
+  h1, h2, h3, h4, h5, h6 {
     line-height: 1.1;
     font-family: var(--font-family);
     font-weight: 700;
@@ -91,20 +107,19 @@
 
   h6 { font-size: 1rem; }
 
-  code {
+  kbd {
     color: var(--primary-color);
     background-color: var(--primary-color-light);
-    margin: 0 0 2.5rem 0;
-    padding: 0.75rem; 
-  }
-
-  blockquote {
-    color: var(--primary-color);
-    background-color: var(--primary-color-light);
-    border-left: 5px solid var(--primary-color);
-    margin: 0 0 2.5rem 0;
-    padding: 0.75rem 0.75rem 0.75rem 1rem; 
-  }
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-color);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .2), 0 2px 0 0 rgba(255, 255, 255, .7) inset;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: .25rem;
+    white-space: nowrap;
+   }
 
   pre:after {
     content: attr(text);
