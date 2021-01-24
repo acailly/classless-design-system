@@ -8,6 +8,144 @@
 
   <!-- DESIGN SYSTEM -->
   <style>
+    /* THIS IS COPIED FROM design-system.html */
+    :root {
+      /* borders */
+      --border-radius: 5px;
+      --border-size: 2px;
+      /* colors */
+      --primary-color: #4a4a4a;
+      --primary-color-light: #f1f1f1;
+      --secondary-color: white;
+      /* font */
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+      --font-size: 1rem;
+      /* spacing */
+      --input-spacing-horizontal: 1rem;
+      --input-spacing-vertical: 0.5rem;
+      /* transition */
+      --transition: 0.25s ease-in-out;
+    }
+
+    html {
+      font-family: var(--font-family);
+    }
+
+    body {
+      max-width: 38em;
+      margin: auto;
+    }
+
+    /**
+     * Form
+     **/
+    button {
+      background: none;
+      color: var(--primary-color);
+      font-size: var(--font-size);
+    }
+
+    button:hover {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      border: solid var(--border-size) var(--primary-color);
+      border-radius: var(--border-radius);
+      padding: var(--input-spacing-vertical) var(--input-spacing-horizontal);
+      transition: background-color var(--transition),
+        border-color var(--transition), color var(--transition),
+        box-shadow var(--transition);
+    }
+
+    /**
+     * Text
+     **/
+    blockquote {
+      color: var(--primary-color);
+      background-color: var(--primary-color-light);
+      border-left: 5px solid var(--primary-color);
+      margin: 0 0 2.5rem 0;
+      padding: 0.75rem 0.75rem 0.75rem 1rem;
+    }
+
+    code {
+      color: var(--primary-color);
+      background-color: var(--primary-color-light);
+      margin: 0 0 2.5rem 0;
+      padding: 0.75rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.1;
+      font-family: var(--font-family);
+      font-weight: 700;
+      color: var(--primary-color);
+      margin-top: 3rem;
+      margin-bottom: 1.5rem;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      -ms-word-break: break-all;
+      word-break: break-word;
+    }
+
+    h1 {
+      font-size: 2.25rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    h4 {
+      font-size: 1.5rem;
+    }
+
+    h5 {
+      font-size: 1.25rem;
+    }
+
+    h6 {
+      font-size: 1rem;
+    }
+
+    kbd {
+      color: var(--primary-color);
+      background-color: var(--primary-color-light);
+      border-radius: var(--border-radius);
+      border: 1px solid var(--primary-color);
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+        0 2px 0 0 rgba(255, 255, 255, 0.7) inset;
+      display: inline-block;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1;
+      padding: 0.25rem;
+      white-space: nowrap;
+    }
+
+    pre:after {
+      content: attr(text);
+      position: absolute;
+      top: 22px;
+      right: 12px;
+    }
+  </style>
+  <style>
     * {
       margin: 0;
       padding: 0;
@@ -124,7 +262,7 @@
     ul {
       padding-bottom: 20px;
     }
-    input[type="submit"] {
+    /* input[type="submit"] {
       border: solid 3px black;
       background: none;
       color: black;
@@ -134,7 +272,7 @@
     input[type="submit"]:hover {
       background-color: black;
       color: white;
-    }
+    } */
   </style>
 
   <body>
