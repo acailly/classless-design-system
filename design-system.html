@@ -40,8 +40,8 @@
     }
 
     /**
-   * Form
-   **/
+     * Form
+     **/
     button {
       background: none;
       color: var(--primary-color);
@@ -66,8 +66,8 @@
     }
 
     /**
-   * Text
-   **/
+     * Text
+     **/
     blockquote {
       color: var(--primary-color);
       background-color: var(--primary-color-light);
@@ -145,6 +145,31 @@
       position: absolute;
       top: 22px;
       right: 12px;
+    }
+
+    /**
+     * Table
+     **/
+    table {
+      width: 100%;
+      border-spacing: 0;
+    }
+
+    th {
+      padding: 1rem 0.25rem;
+      border-bottom: solid var(--border-size) var(--primary-color);
+    }
+
+    table tr:nth-child(odd) {
+      background-color: var(--primary-color-light);
+    }
+
+    tr {
+      text-align: center;
+    }
+
+    td {
+      padding: 0.75rem 0.25rem;
     }
   </style>
 
@@ -251,6 +276,24 @@
         <td>value22</td>
         <td>value23</td>
         <td>value24</td>
+      </tr>
+      <tr>
+        <td>value31</td>
+        <td>value32</td>
+        <td>value33</td>
+        <td>value34</td>
+      </tr>
+      <tr>
+        <td>value41</td>
+        <td>value42</td>
+        <td>value43</td>
+        <td>value44</td>
+      </tr>
+      <tr>
+        <td>value51</td>
+        <td>value52</td>
+        <td>value53</td>
+        <td>value54</td>
       </tr>
     </table>
     <h3>Lists</h3>
